@@ -76,7 +76,8 @@ body {
 .empty-positions, 
 .helds-positions, 
 .see-inventory, 
-.new-movement {
+.new-movement,
+.new-code {
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
