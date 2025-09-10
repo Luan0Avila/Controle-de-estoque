@@ -1,0 +1,5 @@
+1 - Realizar alterações no css para diminuir o tamanho dos botões
+
+2 - Começar a desenvolver as funcionalidades da home_page
+
+3 - melhorar o design da home_page
