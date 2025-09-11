@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
 
-app_name = 'estoque_insumo'
+app_name = 'user'
 
 urlpatterns = [
-    path('register/', vews.register_user, name='register' )
-]
+    path('register/', views.register_user, name='register'),
+    path('register/create/', views.register_create, name='register_create'),]
