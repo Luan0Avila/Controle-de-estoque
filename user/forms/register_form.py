@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from utils.django_forms import add_placeholder, strong_password
-
+from django.utils.text import slugify
 
 class RegisterForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -86,3 +86,17 @@ class RegisterForm(forms.ModelForm):
                     password_confirmation_error,
                 ],
             })
+
+    def generate_username(self):
+        first_name = self.cleaned_data.get('first_name', '')
+        last_name = self.cleaned_data.get('last_name', '')
+
+        base_username = slugify(f"{first_name}-{last_name}")
+        username = base_username
+        counter = 1
+
+        while User.objects.filter(username=username).exists():
+            username = f"{base_username}{counter}"
+            counter += 1
+
+        return username
