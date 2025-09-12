@@ -6,7 +6,6 @@ body {
 
 
 /* header*/
-
 .header-container {
     width: 100%;
     display: flex;
@@ -34,6 +33,34 @@ body {
     text-decoration: none;
     color: white;
 }
+
+.user-enter {
+    background-color: rgb(255, 255, 255);
+    width: 10%;
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+}
+
+.register-link,
+.login-link {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    flex: 1;
+}
+
+.register-link a,
+.login-link a { 
+    text-decoration: none;
+    color: black;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+    box-shadow:rgb(66, 66, 66) 0  2px;
+}
+
 
 
 /* footer */
@@ -63,6 +90,7 @@ body {
     padding: 2rem;
     background: #f5f5f5;
 }
+
 /* home */
 .home-container {
     display: grid;
